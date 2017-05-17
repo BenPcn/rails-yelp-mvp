@@ -1,0 +1,28 @@
+<div class="restohome">
+  <h1>About this restaurant</h1>
+  <br>
+  <h2><%= @restaurant.name %></h2>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+  <ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li><%= review.content%>  | <%= review.rating%></li>
+  <% end %>
+  </ul>
+
+  <p><%= link_to "Add review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %></p>
+  <p><%= link_to "Back", restaurants_path, class: "btn btn-primary" %></p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

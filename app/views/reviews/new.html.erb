@@ -1,0 +1,25 @@
+<div class="restohome">
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :content %>
+    <%= f.input :rating, collection: Review::NOTES, include_blank:  "How good?" %>
+    <%= f.submit class:"btn btn-primary" %>
+  <% end %>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
