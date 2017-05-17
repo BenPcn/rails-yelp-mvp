@@ -1,9 +1,12 @@
-<div class="restohome">
-  <%= simple_form_for [@restaurant, @review] do |f| %>
-    <%= f.input :content %>
-    <%= f.input :rating, collection: Review::NOTES, include_blank:  "How good?" %>
-    <%= f.submit class:"btn btn-primary" %>
-  <% end %>
+<div class="container text-center restohome">
+  <div class="col-sm-8 col-sm-offset-2">
+  <h1>Add a review</h1>
+    <%= simple_form_for [@restaurant, @review] do |f| %>
+      <%= f.input :content %>
+      <%= f.input :rating, collection: Review::NOTES, include_blank:  "How good?" %>
+      <%= f.submit class:"btn btn-primary" %>
+    <% end %>
+  </div>
 </div>
 <br>
 <br>
@@ -20,6 +23,4 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
+

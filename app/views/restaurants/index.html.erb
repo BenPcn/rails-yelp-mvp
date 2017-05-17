@@ -1,10 +1,12 @@
 
 <% @restaurants.each do |restaurant| %>
-<div class="restohome">
-  <h2><%= restaurant.name %></h2>
-  <p><%= restaurant.address %></p>
-  <p><%= link_to "See more", restaurant_path(restaurant) %></p>
-  <hr>
-</div>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card text-center padded features restohome">
+      <h2><%= restaurant.name %></h2>
+      <p><%= restaurant.address %></p>
+      <p>Style: <%= (restaurant.category).upcase %></p>
+      <p><%= link_to "See more", restaurant_path(restaurant) %></p>
+    </div>
+  </div>
 <% end %>
 
